@@ -1,3 +1,3 @@
-# Basic-react-shopping-app-without-redux
+# Basic-react-shopping-cart-without-redux
 
-Creating a basic react shopping app without redux 
+Creating a basic react shopping cart without redux 
