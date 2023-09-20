@@ -5,7 +5,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/MenuItem';
 import { products } from './Data.js'
 

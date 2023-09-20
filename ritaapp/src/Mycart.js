@@ -12,11 +12,8 @@ import { Link } from 'react-router-dom';
 import cartempty from './images/empty-cart.png'
 
 const Mycart = ({cart,setCart}) => {
-  // const [quantity, setQuantity] = useState(1);
-
   const price=cart.map(item=>item.price*item.quantity);
   
-
   const subtotal = price.reduce((accumulator, currentValue) => {
     return accumulator + currentValue
   },0);
@@ -29,11 +26,6 @@ const Mycart = ({cart,setCart}) => {
   let shipping = cart.length === 0 ? 0: 30.00;
   let tax = cart.length === 0 ? 0: 14.00;
   let totalItems = 0;
-  // state.map((item) => {
-  //   return (subtotal += item.price * item.qty);
-  // });
-
-  console.log(cart);
 
   const handleQuantityChange = (event,Item,Id) => {
     const items = cart.filter(item => item.id !== Id)
@@ -41,7 +33,6 @@ const Mycart = ({cart,setCart}) => {
     setCart([...items,Item])
   };
   return (
-
     <div className='cartbg'>
       <h4 style={{ color: "green", marginLeft: "100px" }}><strong>Purchase Request</strong></h4>
       <div style={{ display: 'flex' }}>

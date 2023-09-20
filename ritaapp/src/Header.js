@@ -39,16 +39,9 @@ const Header = ({cart}) => {
     const [auth, setAuth] = useState(true);
     const [anchorEl, setAnchorEl] = useState(null);
 
-    const handleChange = (event) => {
-        setAuth(event.target.checked);
-    };
 
     const handleMenu = (event) => {
         setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = () => {
-        setAnchorEl(null);
     };
 
     return (
@@ -61,13 +54,6 @@ const Header = ({cart}) => {
                             <strong>FRANCHISE ADMIN CONSOLE</strong>
                         </Typography>
                         <div className='searchbox'>
-                            {/* <div className='SearchIconWrapper' >
-                                <SearchIcon className='SearchIcon' />
-                            </div>
-                            <StyledInputBase
-                                placeholder="Search…"
-                                style={{ color: 'black' }}
-                            /> */}
                             <Autocomplete
                                 sx={{ width: 300 }}
                                 options={products.map((option) => option.name)}
@@ -86,8 +72,6 @@ const Header = ({cart}) => {
                         </div>
                         {auth && (
                             <div>
-                                {/* <MoreIcon onClick={handleMenu} className='moreicon'>
-                                </MoreIcon> */}
                                 <Link to="/">
                                     <IconButton
                                         size="small"
@@ -111,28 +95,6 @@ const Header = ({cart}) => {
                                     {cart.length}
                                 </IconButton>
                                 </Link>
-                                {/* <Menu
-                                    id="menu-appbar"
-                                    anchorEl={anchorEl}
-                                    anchorOrigin={{
-                                        vertical: 'top',
-                                        horizontal: 'right',
-                                    }}
-                                    keepMounted
-                                    transformOrigin={{
-                                        vertical: 'top',
-                                        horizontal: 'right',
-                                    }}
-                                    open={Boolean(anchorEl)}
-                                    onClose={handleClose}
-                                >
-                                    <Link to="/">
-                                        <MenuItem><HomeIcon />Home</MenuItem>
-                                    </Link>
-                                    <Link to="/purchaseitems">
-                                        <MenuItem><AddShoppingCartIcon />MY Cart</MenuItem>
-                                    </Link>
-                                </Menu> */}
                             </div>
                         )}
                     </Toolbar>
